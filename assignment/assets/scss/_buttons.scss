@@ -1,0 +1,14 @@
+// assets/scss/_buttons.scss
+@use 'variables' as vars;
+
+.button {
+  background: vars.$primary-color;
+  font-size: vars.$font-size;
+  padding: vars.$btn-padding;
+  border-radius: vars.$btn-radius;
+  font-family: vars.$font-name;
+  outline: auto vars.$outline-color;
+  color: vars.$text-color;
+  border: none;
+  cursor: pointer;
+}

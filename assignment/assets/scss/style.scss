@@ -1,0 +1,85 @@
+// assets/scss/style.scss
+@use 'variables';
+@use 'buttons';
+
+// global styles (module 1)
+body {
+  padding: 60px;
+  font-family: variables.$font-name;
+  background: #f7f7f7;
+}
+
+/* Module 1: box example */
+.box {
+  background: variables.$primary;
+  padding: variables.$spacing;
+  text-align: center;
+  border-radius: variables.$curve;
+  box-shadow: variables.$shadow;
+}
+
+/* Module 3: nesting */
+.card {
+  padding: 1rem;
+  background: #bbbbbb;
+
+  .title {
+    font-weight: 600;
+  }
+
+  .content {
+    color: #444;
+  }
+
+  .actions {
+    button {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+/* Module 4: example navigation styles */
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+
+  li a {
+    text-decoration: none;
+    color: #222;
+  }
+}
+
+/* Module 5: modules (use theme variable) */
+.header {
+  color: variables.$brand;
+  font-weight: 700;
+}
+
+/* Module 6: mixin usage */
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  @include flex-center;
+  gap: 20px;
+  height: 200px;
+  background: #ececec;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background: #bbb;
+}

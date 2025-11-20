@@ -1,0 +1,82 @@
+.button {
+  background: #000;
+  font-size: 16px;
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-family: sans-serif;
+  outline: auto #00ff11;
+  color: #00ff11;
+  border: none;
+  cursor: pointer;
+}
+
+body {
+  padding: 60px;
+  font-family: sans-serif;
+  background: #f7f7f7;
+}
+
+/* Module 1: box example */
+.box {
+  background: #00c3ff;
+  padding: 40px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(39, 39, 39, 0.2);
+}
+
+/* Module 3: nesting */
+.card {
+  padding: 1rem;
+  background: #bbbbbb;
+}
+.card .title {
+  font-weight: 600;
+}
+.card .content {
+  color: #444;
+}
+.card .actions button {
+  margin-right: 0.5rem;
+}
+
+/* Module 4: example navigation styles */
+.site-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+.site-nav ul li a {
+  text-decoration: none;
+  color: #222;
+}
+
+/* Module 5: modules (use theme variable) */
+.header {
+  color: #5a2dff;
+  font-weight: 700;
+}
+
+/* Module 6: mixin usage */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 200px;
+  background: #ececec;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background: #bbb;
+}/*# sourceMappingURL=style.css.map */
