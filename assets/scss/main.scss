@@ -1,11 +1,22 @@
-$primary-color: #272727;
-$accent-color: #ff652f;
-$text-color: #fff;
-$font-weights: (
-  "regular": 400,
-  "medium": 500,
-  "bold": 700,
-);
+@import "./resets";
+@import "./variables";
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+@mixin flexCenter() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin theme($light-theme: true) {
+  @if $light-theme {
+    background: lighten($primary-color, 100%);
+    color: darken($text-color, 100%);
+  }
+}
 
 body {
   background-color: $primary-color;
@@ -13,6 +24,7 @@ body {
 }
 
 .main {
+  @include flexCenter;
   width: 80%;
   margin: 0 auto;
 
@@ -21,12 +33,14 @@ body {
   // interpolation #{&}
 
   #{&}_paragraph {
-    font-weight: map-get($font-weights, bold);
+    font-weight: weight(bold);
 
     &:hover {
       color: pink;
     }
-
   }
-  
+}
+
+.light {
+    @include theme($light-theme: false);
 }
